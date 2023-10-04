@@ -4,7 +4,7 @@ require_once("model-role.php");
 
 $pageTitle = "Role";
 include "view-header.php";
-$champion = selectRole();
+$role = selectRole();
 include "view-role.php";
 include "view-footer.php";
 ?>
