@@ -11,7 +11,7 @@ while ($champions = $champion->fetch_assoc()) {
         <ul class="list-group">
 <?php
   $roles = selectRoleByChampion($champions['champion_id']);
-  while ($role = $roles->fetch_assoc()){
+  while ($roles = $role->fetch_assoc()){
 ?>
       <li class="list-group-item"><?php echo $roles['role_type']; ?> - <?php echo $roles['lane']; ?> - <?php echo $roles['damage']; ?> - <?php echo $roles['powerspike']; ?></li>
 <?php
