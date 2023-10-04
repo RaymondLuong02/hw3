@@ -1,4 +1,4 @@
-<h1>Champions</h1>
+<h1>Role</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
