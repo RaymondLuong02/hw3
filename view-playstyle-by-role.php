@@ -13,15 +13,15 @@
     </thead>
     <tbody>
 <?php
-while ($playstyle = $playstyles->fetch_assoc()) {
+while ($playstyles = $playstyle->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $playstyle['role_id']; ?></td>
-    <td><?php echo $playstyle['role_type']; ?></td>
-    <td><?php echo $playstyle['role_difficulty']; ?></td>
-    <td><?php echo $playstyle['lane']; ?></td>
-    <td><?php echo $playstyle['damage']; ?></td>
-    <td><?php echo $playstyle['powerspike']; ?></td>
+    <td><?php echo $playstyles['role_id']; ?></td>
+    <td><?php echo $playstyles['role_type']; ?></td>
+    <td><?php echo $playstyles['role_difficulty']; ?></td>
+    <td><?php echo $playstyles['lane']; ?></td>
+    <td><?php echo $playstyles['damage']; ?></td>
+    <td><?php echo $playstyles['powerspike']; ?></td>
   </tr>
 <?php
 }
