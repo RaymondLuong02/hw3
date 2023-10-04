@@ -28,6 +28,9 @@
                 <li class="nav-item">
           <a class="nav-link" href="champion-with-role.php">Champions with role</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="playstyle.php">Playstyle</a>
+        </li>
       </ul>
     </div>
   </div>
