@@ -17,12 +17,12 @@ while ($roles = $role->fetch_assoc()) {
     <td><?php echo $roles['role_id']; ?></td>
     <td><?php echo $roles['role_type']; ?></td>
     <td><?php echo $roles['role_difficulty']; ?></td
-          <td>
-            <form method="post" action="playstyle-by-role.php">
-            <input type = "hidden" name="cid" value="<?php echo $roles['role_id']; ?>">
-            <button type="submit" class="btn btn-primary">Playstyle</button>
-          </form>
-          </td>
+    <td>
+      <form method="post" action="playstyle-by-role.php">
+        <input type = "hidden" name="cid" value="<?php echo $roles['role_id']; ?>">
+        <button type="submit" class="btn btn-primary">Playstyle</button>
+      </form>
+    </td>
   </tr>
 <?php
 }
