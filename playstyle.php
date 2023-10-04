@@ -4,7 +4,7 @@ require_once("model-playstyle.php");
 
 $pageTitle = "Playstyle";
 include "view-header.php";
-$champion = selectPlaystyle();
+$playstyle = selectPlaystyle();
 include "view-playstyle.php";
 include "view-footer.php";
 ?>
