@@ -9,9 +9,9 @@ if (isset($_POST['actionType'])) {
   switch ($POST['actionType']) {
     case "Add":
       if (insertRole($_POST['cRole'], $_POST['cDiff'])){
-        echo '<div class="alert alert-success" role="alert">Role Added. </div>"';
+        echo '<div class="alert alert-success" role="alert">Role Added. </div>';
       } else {
-         echo '<div class="alert alert-danger" role="alert">Error. </div>"';
+         echo '<div class="alert alert-danger" role="alert">Error. </div>';
       }
       break;
     }
