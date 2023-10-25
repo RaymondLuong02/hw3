@@ -29,6 +29,9 @@ while ($roles = $role->fetch_assoc()) {
     <td><?php echo $roles['role_type']; ?></td>
     <td><?php echo $roles['role_difficulty']; ?></td>
     <td>
+      <?php
+      include "view-role-editform.php";
+      ?>
     </td>
     <td>
             <form method="post" action="">
