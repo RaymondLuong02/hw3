@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
         case "Edit":
-      if (updateRole($_POST['cRole'], $_POST['cDiff'], $_POST['cid])){
+      if (updateRole($_POST['cRole'], $_POST['cDiff'], $_POST['cid'])){
         echo '<div class="alert alert-success" role="alert">Role Edited. </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert">Error. </div>';
