@@ -23,6 +23,7 @@
             <label for="cDiff" class="form-label">Difficulty</label>
             <input type="text" class="form-control" id="cDiff" name="cDiff">
           </div>
+          <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
