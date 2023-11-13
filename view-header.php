@@ -32,7 +32,7 @@
           <a class="nav-link" href="playstyle.php">Playstyle</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Charts</a>
+          <a class="nav-link" href="champion-chart.php">Charts</a>
         </li>
       </ul>
     </div>
