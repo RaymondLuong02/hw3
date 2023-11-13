@@ -1,10 +1,8 @@
 <?php
-require_once("util-db.php");
-require_once("model-champion-chart-db.php");
-
-$pageTitle = "Champion Chart";
+$pageTitle = "Home";
 include "view-header.php";
-$champion = selectChampion();
-include "view-champion-chart.php";
+?>
+<h1>Homework 3</h1>
+<?php
 include "view-footer.php";
 ?>
