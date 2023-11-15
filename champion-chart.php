@@ -31,8 +31,7 @@ include "view-footer.php";
         'Blue'
     ]
 },
-  });
-  new Chart(ctx, {
+    
     type: 'doughnut',
     data:  {
     datasets: [{
