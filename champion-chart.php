@@ -110,9 +110,7 @@ window.onload = function () {
 </script>
 
 
-<div id="myPlotContainer">
-  <svg id="myPlot" style="width:500px;height:500px"></svg>
-</div>
+<div id="myPlotContainer" style="width:500px;height:500px;"></div>
 <script src="https://d3js.org/d3.v4.js"></script>
 <?php
 include "view-footer.php";
@@ -133,7 +131,8 @@ for (let i = 0; i < numPoints; i++) {
 }
 
 // Append SVG Object to the Page
-const svg = d3.select("#myPlot")
+const svg = d3.select("#myPlotContainer") 
+  .append("svg")
   .attr("width", xSize)
   .attr("height", ySize)
   .append("g")
