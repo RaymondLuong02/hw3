@@ -123,12 +123,5 @@ include "view-footer.php";
         'Blue'
     ]
 },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+  );
 </script>
