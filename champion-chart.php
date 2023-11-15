@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <h1>Charts</h1>
 <div>
-  <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -35,7 +35,7 @@ include "view-footer.php";
 </script>
 
 <div>
-  <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart2"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -70,7 +70,7 @@ include "view-footer.php";
 
 
 <div>
-  <canvas id="myChart3" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart3" ></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -98,7 +98,7 @@ include "view-footer.php";
 
 
 <div>
-  <canvas id="myChart4" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart4" ></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
