@@ -31,11 +31,12 @@ include "view-footer.php";
     ]
 },
   });
+</script>
 
 
 
 <div>
-  <canvas id="myChart"></canvas>
+  <canvas id="myChart2"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
