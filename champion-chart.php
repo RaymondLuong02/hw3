@@ -72,10 +72,8 @@ new Chart("myChart2", {
 </script>
 
 
-<div>
-  <canvas id="myChart3" style="width:100%;max-width:700px"></canvas>
-</div>
-<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 <?php
 include "view-footer.php";
@@ -85,32 +83,38 @@ window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
-	title:{
-		text: "Daily Sleep Statistics of Age Group 12 - 20"
+	title: {
+		text: "Number of iPhones Sold in Different Quarters"
 	},
 	axisX: {
-		valueFormatString: "DDD"
+		minimum: new Date(2015, 01, 25),
+		maximum: new Date(2017, 02, 15),
+		valueFormatString: "MMM YY"
 	},
 	axisY: {
-		title: "Sleep Time (in Hours)",
-		includeZero: true
+		title: "Number of Sales",
+		titleFontColor: "#4F81BC",
+		includeZero: true,
+		suffix: "mn"
 	},
 	data: [{
-		type: "boxAndWhisker",
-		xValueFormatString: "DDDD",
-		yValueFormatString: "#0.0 Hours",
+		indexLabelFontColor: "darkSlateGray",
+		name: "views",
+		type: "area",
+		yValueFormatString: "#,##0.0mn",
 		dataPoints: [
-			{ x: new Date(2017, 6, 3),  y: [4, 6, 8, 9, 7] },
-			{ x: new Date(2017, 6, 4),  y: [5, 6, 7, 8, 6.5] },
-			{ x: new Date(2017, 6, 5),  y: [4, 5, 7, 8, 6.5] },
-			{ x: new Date(2017, 6, 6),  y: [3, 5, 6, 9, 5.5] },
-			{ x: new Date(2017, 6, 7),  y: [6, 8, 10, 11, 8.5] },
-			{ x: new Date(2017, 6, 8),  y: [5, 7, 9, 12, 7.5] },
-			{ x: new Date(2017, 6, 9),  y: [4, 6, 8, 9, 7] }
+			{ x: new Date(2015, 02, 1), y: 74.4, label: "Q1-2015" },
+			{ x: new Date(2015, 05, 1), y: 61.1, label: "Q2-2015" },
+			{ x: new Date(2015, 08, 1), y: 47.0, label: "Q3-2015" },
+			{ x: new Date(2015, 11, 1), y: 48.0, label: "Q4-2015" },
+			{ x: new Date(2016, 02, 1), y: 74.8, label: "Q1-2016" },
+			{ x: new Date(2016, 05, 1), y: 51.1, label: "Q2-2016" },
+			{ x: new Date(2016, 08, 1), y: 40.4, label: "Q3-2016" },
+			{ x: new Date(2016, 11, 1), y: 45.5, label: "Q4-2016" },
+			{ x: new Date(2017, 02, 1), y: 78.3, label: "Q1-2017", indexLabel: "Highest", markerColor: "red" }
 		]
 	}]
 });
 chart.render();
 }
-</script>
 
