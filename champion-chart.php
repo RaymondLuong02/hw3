@@ -18,7 +18,12 @@ include "view-footer.php";
     type: 'doughnut',
     data: {
       datasets: [{
-        data: [10, 20, 30]
+        data: [10, 20, 30],
+        backgroundColor: [
+          'blue',
+          'red',
+          'yellow'
+        ]
       }],
       labels: [
         'Blue',
@@ -43,13 +48,22 @@ include "view-footer.php";
   new Chart(ctx2, {
     type: 'bar',
     data: {
+      labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 6', 'Label 7'],
       datasets: [{
+        data: [10, 20, 30, 40, 50, 60, 70],
+        backgroundColor: 'blue',
         barPercentage: 0.5,
         barThickness: 6,
         maxBarThickness: 8,
         minBarLength: 2,
-        data: [10, 20, 30, 40, 50, 60, 70]
       }]
     },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
   });
 </script>
