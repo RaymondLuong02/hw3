@@ -34,104 +34,10 @@ include "view-footer.php";
   });
 </script>
 
-<div>
-  <canvas id="myChart2"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<?php
-include "view-footer.php";
-?>
-<script>
-  const ctx2 = document.getElementById('myChart2');
-
-  new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 6', 'Label 7'],
-      datasets: [{
-        data: [10, 20, 30, 40, 50, 60, 70],
-        backgroundColor: 'blue',
-        barPercentage: 0.5,
-        barThickness: 6,
-        maxBarThickness: 8,
-        minBarLength: 2,
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
 
 
 <div>
-  <canvas id="myChart3" ></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<?php
-include "view-footer.php";
-?>
-<script>
-  const ctx3 = document.getElementById('myChart3');
-
-  new Chart(ctx3, {
-    type: 'bubble',
-    data: {
-      datasets: [{
-        label: 'Bubble Chart',
-        data: [
-          { x: 10, y: 20, r: 5 },
-          { x: 15, y: 25, r: 8 },
-          { x: 20, y: 30, r: 12 },
-        ],
-        backgroundColor: 'rgba(75, 192, 192, 0.6)', 
-      }]
-    },
-  });
-</script>
-
-
-<div>
-  <canvas id="myChart4" ></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<?php
-include "view-footer.php";
-?>
-<script>
-  const ctx4 = document.getElementById('myChart4');
-
-  new Chart(ctx4, {
-    type: 'polarArea',
-    data: {
-      datasets: [{
-        data: [10, 20, 30],
-        backgroundColor: [
-          'red',
-          'yellow',
-          'blue'
-        ]
-      }],
-      labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-      ]
-    }
-  });
-</script>
-
-
-
-<div>
-  <canvas id="myChart5" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
@@ -141,7 +47,7 @@ include "view-footer.php";
 <script>
 const xValues = [100,200,300,400,500,600,700,800,900,1000];
 
-new Chart("myChart5", {
+new Chart("myChart2", {
   type: "line",
   data: {
     labels: xValues,
@@ -166,54 +72,42 @@ new Chart("myChart5", {
 </script>
 
 
-
-
 <div>
-  <canvas id="myChart6" style="width:100%;max-width:700px"></canvas>
+  <canvas id="myChart3" style="width:100%;max-width:700px"></canvas>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 <?php
 include "view-footer.php";
 ?>
 <script>
-var ctx6 = document.getElementById("myChart6");
-var myChart = new Chart(ctx6, { 
-  type: 'bar', 
-  data: { 
-    labels: ["CS", "IT" , "ECE" , "EE", "ME", "BE"], 
-    datasets: [ 
-      { 
-        label: '# of students', 
-        data: [105,124,78,91,62,56], 
-        backgroundColor :['rgba(255, 99, 132, 0.2)', 
-                'rgba(54, 162, 235, 0.2)', 
-                'rgba(255, 206, 86, 0.2)', 
-                'rgba(75, 192, 192, 0.2)', 
-                'rgba(153, 102, 255, 0.2)', 
-                'rgba(255, 159, 64, 0.2)' 
-        ], 
-        borderColor: [ 
-          'rgba(255,99,132,1)', 
-          'rgba(54, 162, 235, 1)', 
-          'rgba(255, 206, 86, 1)', 
-          'rgba(75, 192, 192, 1)', 
-          'rgba(153, 102, 255, 1)', 
-          'rgba(255, 159, 64, 1)' 
-        ], 
-        borderWidth : 1 
-      } 
-    ] 
-  }, 
-  options: { 
-    scales: { 
-      yAxes: [{ 
-        ticks: { 
-          beginAtZero:true 
-        } 
-      }] 
-    } 
-  }
+var chart = new CanvasJS.Chart("myChart3", { 
+  animationEnabled: true,
+  title: {
+    text: "Daily Sleep Statistics of Age Group 12 - 20"
+  },
+  axisX: {
+    valueFormatString: "DDD"
+  },
+  axisY: {
+    title: "Sleep Time (in Hours)",
+    includeZero: true
+  },
+  data: [{
+    type: "boxAndWhisker",
+    xValueFormatString: "DDDD",
+    yValueFormatString: "#0.0 Hours",
+    dataPoints: [
+      { x: new Date(2017, 6, 3), y: [4, 6, 8, 9, 7] },
+      { x: new Date(2017, 6, 4), y: [5, 6, 7, 8, 6.5] },
+      { x: new Date(2017, 6, 5), y: [4, 5, 7, 8, 6.5] },
+      { x: new Date(2017, 6, 6), y: [3, 5, 6, 9, 5.5] },
+      { x: new Date(2017, 6, 7), y: [6, 8, 10, 11, 8.5] },
+      { x: new Date(2017, 6, 8), y: [5, 7, 9, 12, 7.5] },
+      { x: new Date(2017, 6, 9), y: [4, 6, 8, 9, 7] }
+    ]
+  }]
 });
+chart.render();
 </script>
 
