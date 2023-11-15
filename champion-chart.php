@@ -11,28 +11,23 @@ include "view-header.php";
 <?php
 include "view-footer.php";
 ?>
-
 <script>
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
     type: 'doughnut',
-    data:  {
-    datasets: [{
+    data: {
+      datasets: [{
         data: [10, 20, 30]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
+      }],
+      labels: [
         'Blue',
         'Red',
         'Yellow'
-    ]
-},
+      ]
+    },
   });
 </script>
-
-
 
 <div>
   <canvas id="myChart2"></canvas>
@@ -42,20 +37,20 @@ include "view-footer.php";
 <?php
 include "view-footer.php";
 ?>
-
 <script>
   const ctx2 = document.getElementById('myChart2');
 
   new Chart(ctx2, {
-    type: 'bar',
-    data:  {
-    datasets: [{
-        barPercentage: 0.5,
-        barThickness: 6,
-        maxBarThickness: 8,
-        minBarLength: 2,
-        data: [10, 20, 30, 40, 50, 60, 70]
-    }]
-};,
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [10, 20, 30]
+      }],
+      labels: [
+        'Green',
+        'Red',
+        'Yellow'
+      ]
+    },
   });
 </script>
