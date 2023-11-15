@@ -89,9 +89,8 @@ include "view-footer.php";
           { x: 10, y: 20, r: 5 },
           { x: 15, y: 25, r: 8 },
           { x: 20, y: 30, r: 12 },
-          // Add more data points as needed
         ],
-        backgroundColor: 'rgba(75, 192, 192, 0.6)', // Set bubble color
+        backgroundColor: 'rgba(75, 192, 192, 0.6)', 
       }]
     },
   });
