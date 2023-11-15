@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <h1>Charts</h1>
 <div>
-  <canvas id="myChart"></canvas>
+  <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -35,7 +35,7 @@ include "view-footer.php";
 </script>
 
 <div>
-  <canvas id="myChart2"></canvas>
+  <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -70,7 +70,7 @@ include "view-footer.php";
 
 
 <div>
-  <canvas id="myChart3"></canvas>
+  <canvas id="myChart3" style="width:100%;max-width:700px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -98,7 +98,7 @@ include "view-footer.php";
 
 
 <div>
-  <canvas id="myChart4"></canvas>
+  <canvas id="myChart4" style="width:100%;max-width:700px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -164,3 +164,56 @@ new Chart("myChart5", {
   }
 });
 </script>
+
+
+
+
+<div>
+  <canvas id="myChart6" style="width:100%;max-width:700px"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+<?php
+include "view-footer.php";
+?>
+<script>
+var ctx6 = document.getElementById("myChart6");
+var myChart = new Chart(ctx6, { 
+  type: 'bar', 
+  data: { 
+    labels: ["CS", "IT" , "ECE" , "EE", "ME", "BE"], 
+    datasets: [ 
+      { 
+        label: '# of students', 
+        data: [105,124,78,91,62,56], 
+        backgroundColor :['rgba(255, 99, 132, 0.2)', 
+                'rgba(54, 162, 235, 0.2)', 
+                'rgba(255, 206, 86, 0.2)', 
+                'rgba(75, 192, 192, 0.2)', 
+                'rgba(153, 102, 255, 0.2)', 
+                'rgba(255, 159, 64, 0.2)' 
+        ], 
+        borderColor: [ 
+          'rgba(255,99,132,1)', 
+          'rgba(54, 162, 235, 1)', 
+          'rgba(255, 206, 86, 1)', 
+          'rgba(75, 192, 192, 1)', 
+          'rgba(153, 102, 255, 1)', 
+          'rgba(255, 159, 64, 1)' 
+        ], 
+        borderWidth : 1 
+      } 
+    ] 
+  }, 
+  options: { 
+    scales: { 
+      yAxes: [{ 
+        ticks: { 
+          beginAtZero:true 
+        } 
+      }] 
+    } 
+  }
+});
+</script>
+
