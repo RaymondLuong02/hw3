@@ -26,9 +26,9 @@ include "view-footer.php";
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
+        'Blue',
         'Red',
-        'Yellow',
-        'Blue'
+        'Yellow'
     ]
 },
     
