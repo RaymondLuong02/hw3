@@ -110,18 +110,19 @@ include "view-footer.php";
   const ctx4 = document.getElementById('myChart4');
 
   new Chart(ctx4, {
-    type: 'bar',
-    data: {
-      labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 6', 'Label 7'],
-      datasets: [{
-        data: [10, 20, 30, 40, 50, 60, 70],
-        backgroundColor: 'blue',
-        barPercentage: 0.5,
-        barThickness: 6,
-        maxBarThickness: 8,
-        minBarLength: 2,
-      }]
-    },
+    type: 'polarArea',
+    data: 
+    datasets: [{
+        data: [10, 20, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ]
+},
     options: {
       scales: {
         y: {
