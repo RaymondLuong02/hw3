@@ -30,7 +30,10 @@ include "view-footer.php";
     ]
 },
   });
---------
+
+
+
+  
 <div>
   <canvas id="myChart2"></canvas>
 </div>
