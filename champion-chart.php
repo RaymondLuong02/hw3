@@ -120,8 +120,8 @@ include "view-footer.php";
 const xSize = 500; 
 const ySize = 500;
 const margin = 40;
-const xMax = xSize - margin * 2;
-const yMax = ySize - margin * 2;
+const xMax = xSize - margin*2;
+const yMax = ySize - margin*2;
 
 // Create Random Points
 const numPoints = 100;
@@ -131,12 +131,10 @@ for (let i = 0; i < numPoints; i++) {
 }
 
 // Append SVG Object to the Page
-const svg = d3.select("#myPlotContainer") 
+const svg = d3.select("#myPlot")
   .append("svg")
-  .attr("width", xSize)
-  .attr("height", ySize)
   .append("g")
-  .attr("transform", "translate(" + margin + "," + margin + ")");
+  .attr("transform","translate(" + margin + "," + margin + ")");
 
 // X Axis
 const x = d3.scaleLinear()
@@ -150,18 +148,18 @@ svg.append("g")
 // Y Axis
 const y = d3.scaleLinear()
   .domain([0, 500])
-  .range([yMax, 0]);
+  .range([ yMax, 0]);
 
 svg.append("g")
   .call(d3.axisLeft(y));
 
 // Dots
-svg.selectAll("dot")
+svg.append('g')
+  .selectAll("dot")
   .data(data).enter()
   .append("circle")
-  .attr("cx", function (d) { return d[0] })
-  .attr("cy", function (d) { return d[1] })
+  .attr("cx", function (d) { return d[0] } )
+  .attr("cy", function (d) { return d[1] } )
   .attr("r", 3)
-  .style("fill", "red");
+  .style("fill", "Red");
 </script>
-
