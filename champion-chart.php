@@ -43,7 +43,6 @@ include "view-footer.php";
 <?php
 include "view-footer.php";
 ?>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   const ctx2 = document.getElementById('myChart2');
