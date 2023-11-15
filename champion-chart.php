@@ -41,16 +41,15 @@ include "view-footer.php";
   const ctx2 = document.getElementById('myChart2');
 
   new Chart(ctx2, {
-    type: 'doughnut',
+    type: 'bar',
     data: {
       datasets: [{
-        data: [10, 20, 30]
-      }],
-      labels: [
-        'Green',
-        'Red',
-        'Yellow'
-      ]
+        barPercentage: 0.5,
+        barThickness: 6,
+        maxBarThickness: 8,
+        minBarLength: 2,
+        data: [10, 20, 30, 40, 50, 60, 70]
+      }]
     },
   });
 </script>
