@@ -12,8 +12,6 @@ include "view-header.php";
 include "view-footer.php";
 ?>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
   const ctx = document.getElementById('myChart');
 
@@ -31,7 +29,21 @@ include "view-footer.php";
         'Yellow'
     ]
 },
-    
+  });
+--------
+<div>
+  <canvas id="myChart2"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<?php
+include "view-footer.php";
+?>
+
+<script>
+  const ctx2 = document.getElementById('myChart2');
+
+  new Chart(ctx2, {
     type: 'doughnut',
     data:  {
     datasets: [{
@@ -40,9 +52,9 @@ include "view-footer.php";
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-        'Red',
-        'Yellow',
-        'Blue'
+        'Green',
+        'Black',
+        'Yellow'
     ]
 },
   });
